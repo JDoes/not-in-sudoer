@@ -1,0 +1,21 @@
+In CentOS/RHEL:
+
+Add the desired user to the wheel group
+
+$ sudo -i
+
+and then:
+
+$ usermod -aG wheel DesiredUser
+
+#######################################################
+Alternatively, you can also add the DesiredUser to 
+the sudoers file by:
+#######################################################
+
+$ visudo
+
+and then add the user on the next line, under root where it says: 
+
+root            ALL=(ALL)       ALL
+DesiredUser     ALL=(ALL)       ALL
